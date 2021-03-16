@@ -5,15 +5,14 @@ This repo contains implementations of several baseline for the ["Multitemporal S
 ## Project description
 ```
 .
-├── add_single_cls.py # 
-├── boost_inference.py
+├── add_single_cls.py # Use single class classifiers for coverage
 ├── create_nlcd_only_baseline.py
 ├── data
 │   ├── dfc2021_index.geojson
 │   ├── dfc2021_index.txt
 │   ├── splits
 │   │   ├── test_inference.csv
-│   │   ├── test_origin_label_radio_2.csv
+│   │   ├── test_origin_label_radio_2.csv # Mixing high-resolution labels and low-resolution labels
 │   │   ├── training_set_naip_nlcd_2013.csv
 │   │   ├── training_set_naip_nlcd_2017.csv
 │   │   ├── training_set_naip_nlcd_both.csv
@@ -21,29 +20,28 @@ This repo contains implementations of several baseline for the ["Multitemporal S
 │   ├── test_tiles.txt
 │   └── val_tiles.txt
 ├── dataloaders
-│   ├── Landsat2NlcdDatasets.py
-│   ├── Landsat2NlcdTileDatasets.py
+│   ├── Landsat2NlcdDatasets.py # Use Landsat8 to generate NLCD 
+│   ├── Landsat2NlcdTileDatasets.py # Use Landsat8 to generate NLCD 
 │   ├── StreamingDatasets.py
 │   ├── TileDatasets.py
-│   ├── TileMLDatasets.py
+│   ├── TileMLDatasets.py # datasets for random forest model
 │   └── __init__.py
 ├── independent_pairs_to_predictions.py
-├── inference.py
-├── label_inference.py
-├── landsat2nlcd_inference.py
+├── inference.py 
+├── label_inference.py # Used to generate high-resolution pseudo-labels
+├── landsat2nlcd_inference.py # Use Landsat8 to generate NLCD 
 ├── models.py
-├── predictions_clean.py
-├── rfc.py
-├── single_class_data_maker.py
-├── single_inference.py
-├── single_train.py
-├── train.py
-├── train_landsat2nlcd.py
-├── tree.text
+├── predictions_clean.py # Used to remove the noise on the change prediction map
+├── rfc.py # Used to train the random forest model
+├── single_class_data_maker.py # Select the data for training a single-class classifier
+├── single_inference.py # Inference single class classifier
+├── single_train.py # Train single class classifier
+├── train.py 
+├── train_landsat2nlcd.py # Use Landsat8 to generate NLCD 
 ├── utils.py
 ├── viz_utils.py
-├── vote_models.py
-└── vote_models_predictions.py
+├── vote_models.py # Vote the model on the land cover classification map
+└── vote_models_predictions.py # Vote the model on the change map
 ```
 
 ## Environment setup
