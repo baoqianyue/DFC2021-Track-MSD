@@ -1,0 +1,11 @@
+jupyter==1.0.0
+jupyter-console==6.1.0
+jupyter-core==4.6.3
+jupyterlab==2.1.5
+notebook==6.0.3
+numpy==1.18.5
+opencv-python==4.3.0.36
+rasterio==1.2.0
+scikit-image==0.16.2
+torch==1.6.0
+torchvision==0.7.0
