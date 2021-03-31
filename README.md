@@ -1,6 +1,14 @@
 # DFC2021 MSD
 This repo contains implementations of several baseline for the ["Multitemporal Semantic Change Detection" (MSD) track](http://www.grss-ieee.org/community/technical-committees/data-fusion/2021-ieee-grss-data-fusion-contest-track-msd/) of the 2021 IEEE GRSS Data Fusion Competition (DFC2021). See the [CodaLab page](https://competitions.codalab.org/competitions/27956) for more information about the competition, including the current leaderboard!
 
+## Results     
+
+- val phase  
+MIou: 0.6452 Rank: 7/46   
+
+- test phase  
+MIou: 0.6445 Rank: 3/15    
+
 
 ## Project description
 ```
@@ -59,19 +67,11 @@ pip install ipykernel
 python -m ipykernel install --user --name dfc2021
 ```
 
-
+## Visualizations   
 <p align="center">
     <img src="images/fcn_unet.png" width="430"/>
 </p>
 
 
+This repo is based on the [baseline](https://github.com/calebrob6/dfc2021-msd-baseline) code   
 
-If you make use of this implementation in your own project or want to refer to it in a scientific publication, **please consider referencing this GitHub repository and citing our [paper](https://arxiv.org/pdf/2101.01154.pdf)**:
-```
-@Article{malkinDFC2021,
-  author  = {Kolya Malkin and Caleb Robinson and Nebojsa Jojic},
-  title   = {High-resolution land cover change from low-resolution labels: Simple baselines for the 2021 IEEE GRSS Data Fusion Contest},
-  year    = {2021},
-  journal = {arXiv:2101.01154}
-}
-```
